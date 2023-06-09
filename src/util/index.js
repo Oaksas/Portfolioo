@@ -1,30 +1,28 @@
-const nodemailer = require("nodemailer");
+import emailjs from "emailjs-com";
 
-const sendEmail = async (name, email, message) => {
-  // Create a transporter using your email service provider's SMTP settings
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com", // Replace with your SMTP server host
-    port: 587, // Replace with the appropriate port
-    secure: false, // Set to true if using a secure connection (e.g., TLS)
-    auth: {
-      user: "aman@aait.edu.et", // Replace with your email address
-      pass: "tanasansui", // Replace with your email password or an app-specific password
-    },
-  });
+export const sendEmail = (name, email, message) => {
+  // Replace the placeholders with your own EmailJS account details
+  const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const userID = process.env.REACT_APP_EMAILJS_USER_ID;
 
-  try {
-    // Send the email
-    const info = await transporter.sendMail({
-      from: email, // Replace with your email address
-      to: "aman@aait.edu.et",
-      subject: "New message from contact form",
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+  // Prepare the parameters for the email
+  const templateParams = {
+    from_name: name,
+    from_email: email,
+    to_name: "", // Replace with the recipient's name or email address
+    message: message,
+  };
+
+  // Send the email using EmailJS
+  emailjs
+    .send(serviceID, templateID, templateParams, userID)
+    .then(function (response) {
+      console.log("Email sent successfully:", response.status, response.text);
+      // You can perform additional actions here after the email is successfully sent
+    })
+    .catch(function (error) {
+      console.error("Email failed to send:", error);
+      // Handle any errors that occurred during the sending process
     });
-
-    console.log("Email sent:", info.messageId);
-  } catch (error) {
-    console.error("Error sending email:", error);
-  }
 };
-
-module.exports = sendEmail;

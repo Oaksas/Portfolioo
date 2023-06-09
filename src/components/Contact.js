@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-const sendEmail = require("../util");
-
+import { sendEmail } from "../util";
+import { Toaster, toast } from "react-hot-toast";
 const Contact = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -12,16 +12,16 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // sendEmail(name, email, message)
-    //   .then(() => {
-    //     console.log("Email sent successfully!");
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error sending email:", error);
-    //   }); // console.log(name, email, message);
+    try {
+      sendEmail(name, email, message);
+      toast.success("Successfully sent!");
+    } catch (error) {
+      toast.error("Some error occured");
+    }
   };
   return (
     <section className="section py-16 lg:section" id="contact">
+      <Toaster position="top-center" reverseOrder={false} />;
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
           <motion.div
@@ -55,23 +55,24 @@ const Contact = () => {
               placeholder="Your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <input
               className="bg-transparent border-b py-3 outline-none placeholder:text-white focus:border-accent transition-all"
-              type="text"
+              type="email"
               placeholder="Your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <textarea
               className="bg-transparent  border-b py-12 outline-none w-full placeholder:text-white  focus:border-accent  transition-all resize-none mb-12"
               placeholder="Your message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              required
             ></textarea>
-            <button className="btn btn-lg" onClick={handleSubmit}>
-              Send message
-            </button>
+            <button className="btn btn-lg">Send message</button>
           </motion.form>
         </div>
       </div>

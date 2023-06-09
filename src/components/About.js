@@ -30,22 +30,24 @@ const About = () => {
           >
             <h2 className="h2 text-accent">About me</h2>
             <h3 className="h3 mb-4">
-              I'm a Freelancer Front-end Developer with of 5 years of
-              experience.{" "}
+              I'm a Full Stack Developer with of 5 years of experience.{" "}
             </h3>
             <p className="mb-6">
               {" "}
-              My passion for front-end development stems from my love for
-              creating visually appealing and user-friendly websites. I have a
-              strong command of HTML, CSS, and JavaScript, allowing me to bring
-              designs to life and ensure seamless functionality across different
-              platforms and devices.
+              My ardor for development originates from my profound admiration
+              for crafting captivating and intuitive websites. With a commanding
+              grasp of HTML, CSS, JavaScript, React, Next.js, Django, and
+              Node.js, I possess the prowess to transform designs into vivid
+              realities, guaranteeing flawless performance across diverse
+              platforms and devices. By seamlessly integrating robust back-end
+              frameworks, I ensure the seamless functionality and efficient data
+              management of the websites I create.
             </p>
 
             <div className="flex gap-x-6 lg:gap-x-10 mb-12 ">
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={13} duration={3} /> : ""}
+                  {inView ? <CountUp start={0} end={6} duration={3} /> : ""}
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
                   Years of <br />
@@ -55,12 +57,12 @@ const About = () => {
 
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={15} duration={3} /> : ""} k+
+                  {inView ? <CountUp start={0} end={20} duration={3} /> : ""} +
                 </div>
 
                 <div className="font-primary text-sm tracking-[2px]">
                   {" "}
-                  Projects
+                  Professional Projects
                   <br />
                   Completed
                 </div>
@@ -68,7 +70,7 @@ const About = () => {
 
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={10} duration={3} /> : ""} k+
+                  {inView ? <CountUp start={0} end={15} duration={3} /> : ""} +
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
                   {" "}
@@ -82,7 +84,11 @@ const About = () => {
               <button className="btn btn-lg">
                 <a href="#contact"> Contact me</a>
               </button>
-              <a href="#" className="text-gradient btn-link">
+              <a
+                href={process.env.REACT_APP_PORTFOLIO_URL}
+                target="_blank"
+                className="text-gradient btn-link"
+              >
                 My Resume
               </a>
             </div>
