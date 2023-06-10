@@ -5,7 +5,7 @@ const Header = () => {
     <header className="py-8">
       <div className="container mx-auto">
         <div className="flex justify-between items-center ">
-          <h1 className="text-3xl font-black">W</h1>
+          <h1 className="text-3xl font-logo">W</h1>
 
           <button className="btn btn-sm">
             {" "}

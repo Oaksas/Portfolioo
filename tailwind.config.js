@@ -5,6 +5,7 @@ module.exports = {
       primary: "Orbitron",
       secondary: "Rajdhani",
       tertiary: "Aldrich",
+      logo: "'Josefin Sans', sans-serif",
     },
     container: {
       padding: {

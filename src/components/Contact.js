@@ -24,13 +24,7 @@ const Contact = () => {
       <Toaster position="top-center" reverseOrder={false} />;
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
-          <motion.div
-            variants={fadeIn("right", 0.7)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }}
-            className="flex-1 flex justify-start items-center"
-          >
+          <div className="flex-1 flex justify-start items-center">
             <div>
               <h4 className="text-xl uppercase text-accent font-medium mb-2  tracking-wide">
                 {" "}
@@ -40,7 +34,7 @@ const Contact = () => {
                 Let's work <br /> together!
               </h2>
             </div>
-          </motion.div>
+          </div>
           <motion.form
             variants={fadeIn("left", 0.7)}
             initial="hidden"
