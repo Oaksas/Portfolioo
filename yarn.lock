@@ -3996,11 +3996,6 @@ emailjs-com@^3.2.0:
   resolved "https://registry.yarnpkg.com/emailjs-com/-/emailjs-com-3.2.0.tgz#a53cb22f1bc433c701c84c53d8b56eefd5ce7111"
   integrity sha512-Prbz3E1usiAwGjMNYRv6EsJ5c373cX7/AGnZQwOfrpNJrygQJ15+E9OOq4pU8yC977Z5xMetRfc3WmDX6RcjAA==
 
-emailjs@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/emailjs/-/emailjs-4.0.2.tgz#4ebb555a40a51e0493928e3a6b628da44044e2c7"
-  integrity sha512-w/tldI93qO7uw9XzdwCCRR36OY/TYJxB81vEOmQkmxVDZOdrAnoQoOAvaMoDmmBUSoD1msyAIwBdKFWzC7lgKQ==
-
 emittery@^0.10.2:
   version "0.10.2"
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.10.2.tgz#902eec8aedb8c41938c46e9385e9db7e03182933"
@@ -7687,6 +7682,11 @@ raw-body@2.5.1:
     http-errors "2.0.0"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-animated-cursor@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/react-animated-cursor/-/react-animated-cursor-2.7.0.tgz#caf56f3ff3ce47f5fd1f4ba3622ebf7d137eb274"
+  integrity sha512-l6A0aVLBC+XmNbYWfzdkvV/OBC5h4KjpUiLUvqXNOrniGr4XSCrVA225XNBpIpwtalzOPMwj5DYUxsoKoI02Bw==
 
 react-app-polyfill@^3.0.0:
   version "3.0.0"

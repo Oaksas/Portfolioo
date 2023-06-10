@@ -9,6 +9,8 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import { loadFull } from "tsparticles";
 import ParticlesContainer from "./components/particles";
+import AnimatedCursor from "react-animated-cursor";
+
 const App = () => {
   const customInit = useCallback(async (engine) => {
     // this adds the bundle to tsParticles
@@ -17,6 +19,8 @@ const App = () => {
 
   return (
     <div className="bg-black overflow-hidden">
+      <AnimatedCursor />
+
       <Header />
       <Banner />
       <Nav />
