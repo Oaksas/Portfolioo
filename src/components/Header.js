@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => {
+const Header = React.memo(() => {
   return (
     <header className="py-8">
       <div className="container mx-auto">
@@ -15,6 +15,6 @@ const Header = () => {
       </div>
     </header>
   );
-};
+});
 
 export default Header;

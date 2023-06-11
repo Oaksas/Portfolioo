@@ -1,6 +1,5 @@
 import React from "react";
 
-import { BsArrowUpRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
@@ -19,7 +18,7 @@ const services = [
     name: "Consultancy",
   },
 ];
-const Services = () => {
+const Services = React.memo(() => {
   return (
     <section className="section" id="services">
       <div className="container mx-auto">
@@ -78,6 +77,6 @@ const Services = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Services;

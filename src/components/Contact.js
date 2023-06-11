@@ -1,30 +1,41 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { sendEmail } from "../util";
 import { Toaster, toast } from "react-hot-toast";
-const Contact = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [message, setMessage] = useState();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const Contact = React.memo(() => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-    try {
-      sendEmail(name, email, message);
-      toast.success("Successfully sent!");
-    } catch (error) {
-      toast.error("Some error occured");
-    }
-  };
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+
+      try {
+        sendEmail(name, email, message);
+        toast.success("Successfully sent!");
+      } catch (error) {
+        toast.error("Some error occurred");
+      }
+    },
+    [name, email, message]
+  );
+
   return (
     <section className="section py-16 lg:section" id="contact">
       <Toaster position="top-center" reverseOrder={false} />;
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
-          <div className="flex-1 flex justify-start items-center">
+          <motion.div
+            variants={fadeIn("left", 0.7)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="flex-1 flex justify-start items-center"
+          >
             <div>
               <h4 className="text-xl uppercase text-accent font-medium mb-2  tracking-wide">
                 {" "}
@@ -34,7 +45,7 @@ const Contact = () => {
                 Let's work <br /> together!
               </h2>
             </div>
-          </div>
+          </motion.div>
           <motion.form
             variants={fadeIn("left", 0.7)}
             initial="hidden"
@@ -72,6 +83,6 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Contact;

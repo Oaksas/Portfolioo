@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-const Banner = () => {
+const Banner = React.memo(() => {
   return (
     <section
       className="min-h-[85vh] lg:min-h-[78vh] flex items-center "
@@ -100,6 +100,6 @@ const Banner = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Banner;

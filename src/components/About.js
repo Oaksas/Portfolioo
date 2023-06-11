@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
-const About = () => {
+const About = React.memo(() => {
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
@@ -97,6 +97,6 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
 
 export default About;

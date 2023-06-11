@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import { loadFull } from "tsparticles";
 import ParticlesContainer from "./components/particles";
 import AnimatedCursor from "react-animated-cursor";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const customInit = useCallback(async (engine) => {
@@ -19,8 +20,8 @@ const App = () => {
 
   return (
     <div className="bg-black overflow-hidden">
+      <Toaster position="top-center" reverseOrder={false} />
       <AnimatedCursor />
-
       <Header />
       <Banner />
       <Nav />

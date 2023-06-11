@@ -6,7 +6,7 @@ import Img1 from "../assets/p0.png";
 import Img2 from "../assets/p3.png";
 import Img3 from "../assets/p4.png";
 
-const Work = () => {
+const Work = React.memo(() => {
   return (
     <section className="section" id="work">
       <div className="container mx-auto">
@@ -97,6 +97,6 @@ const Work = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Work;
