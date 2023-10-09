@@ -8,10 +8,10 @@ const services = [
     name: "UI/UX Design",
   },
   {
-    name: "Website Development",
+    name: "Front End Development",
   },
   {
-    name: "Mobile Application Development",
+    name: "Back End  Development",
   },
 
   {
