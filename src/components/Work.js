@@ -5,6 +5,7 @@ import { fadeIn } from "../variants";
 import Img1 from "../assets/p0.png";
 import Img2 from "../assets/p3.png";
 import Img3 from "../assets/p4.png";
+import Img4 from "../assets/allo.png";
 
 const Work = React.memo(() => {
   return (
@@ -59,15 +60,22 @@ const Work = React.memo(() => {
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
               <img
                 className="group-hover:scale-125 transition-all  duration-500"
-                src={Img2}
+                src={Img4}
                 alt=""
               />
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
                 <span className="text-gradient">Web Application</span>
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">ChatGPT Landing</span>
+
+                <span className="text-3xl text-white">   <a href="https://www.allo.gg" target="_blank">Allo</a> </span>
               </div>
+              <div className="absolute -bottom-full left-12 group-hover:bottom-8 transition-all duration-700 z-50">
+                <span className="text-l text-white mt-5 block">One place to conmmunicate with your team. </span>
+
+              </div>
+
+
               <div>
                 <span></span>
               </div>
