@@ -30,7 +30,7 @@ const About = React.memo(() => {
           >
             <h2 className="h2 text-accent">About me</h2>
             <h3 className="h3 mb-4">
-              I'm a Full Stack Developer with of 5 years of experience.{" "}
+              I'm a Full Stack Developer with over 5 years of experience.{" "}
             </h3>
             <p className="mb-6">
               {" "}
