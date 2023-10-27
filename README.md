@@ -3,7 +3,7 @@ WOLDEAMANUAL GETNET
 
 ### Software Engineer with 5 years of experience
 
-This is my portfolio. you can clone it and use as per your need as its opensourceDay 😀
+This is my portfolio. you can clone it and use as per your need as its open source 😀
 
 How to clone and install
 
