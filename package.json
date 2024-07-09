@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.7.0",
@@ -14,6 +15,7 @@
     "react-hot-toast": "^2.4.1",
     "react-particles": "^2.10.1",
     "react-scripts": "^5.0.1",
+    "tailwind-merge": "^2.4.0",
     "tsparticles": "^2.10.1",
     "tsparticles-engine": "^2.10.1",
     "web-vitals": "^2.1.4"
@@ -43,7 +45,7 @@
     ]
   },
   "devDependencies": {
-    "framer-motion": "^8.4.3",
+    "framer-motion": "^11.2.13",
     "react-countup": "^6.4.0",
     "react-icons": "^4.7.1",
     "react-intersection-observer": "^9.4.1",
