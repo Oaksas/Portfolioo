@@ -5,7 +5,7 @@ import { InfiniteMovingCards } from './cards/SkillCards'
 
 const Skills = React.memo(() => {
     return (
-        <section className="section" id="work">
+        <section className="section" id="skills">
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row gap-x-10">
                     <motion.div
